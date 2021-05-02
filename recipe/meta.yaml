@@ -1,5 +1,5 @@
 {% set name = "drf-api-tracking" %}
-{% set version = "1.7.8" %}
+{% set version = "1.8.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/drf-api-tracking-{{ version }}.tar.gz
-  sha256: ad8e30e7b01d7e304d67abd04f6de42a67bf13154ddc85489789610a5adcb5c9
+  sha256: 170b59d4f1db00de46a32a3dc67d8611ecd980a05aa6116eb5ea63b3140a1180
 
 build:
   number: 0
