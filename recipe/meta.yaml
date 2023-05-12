@@ -19,7 +19,7 @@ requirements:
   host:
     - pip
     - python >=3.6
-    - poetry-core
+    - poetry-core >=1.0.0
   run:
     - django >=1.7
     - djangorestframework >=3
