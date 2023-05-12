@@ -16,11 +16,10 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
-    - poetry-core
   host:
     - pip
     - python >=3.6
+    - poetry-core
   run:
     - django >=1.7
     - djangorestframework >=3
