@@ -7,22 +7,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/drf-api-tracking-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/drf-api-tracking-{{ version }}.tar.gz
   sha256: 0f085479fc67c8d4d2e5a8d5059bfe853eed2ba2d4ec4063fa5438d11b3f687c
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - django >=1.7
     - djangorestframework >=3
-    - python >=3.6
+    - python >={{ python_min }}
     - pytz
 
 test:
@@ -33,6 +33,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/lingster/drf-api-tracking
